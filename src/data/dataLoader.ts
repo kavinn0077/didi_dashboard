@@ -101,7 +101,8 @@ function normalizeDate(raw: string): string {
 
 // 支援引號與逗號的強健 CSV 解析器
 function parseCSV(text: string): Record<string, string>[] {
-  const lines = text.trim().split(/\r?\n/);
+  const cleanText = text.charCodeAt(0) === 0xFEFF ? text.slice(1) : text;
+  const lines = cleanText.trim().split(/\r?\n/);
   if (lines.length < 2) return [];
   
   const headers = lines[0].split(',').map(h => h.trim().replace(/^["']|["']$/g, ''));

@@ -42,7 +42,8 @@ const AVAILABLE_DIAGRAM_TYPES = [
   { name: 'Radar Profile', desc: 'Multi-axis operational performance index', icon: Radar, bg: 'bg-cyan-100 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400' },
   { name: 'Box Plot Dispersion', desc: 'Variance, medians and outlier distribution', icon: SlidersHorizontal, bg: 'bg-fuchsia-100 dark:bg-fuchsia-950/60 text-fuchsia-600 dark:text-fuchsia-400' },
   { name: 'Stacked Area Horizon', desc: 'Cumulative volume composition over time', icon: Layers, bg: 'bg-violet-100 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400' },
-  { name: 'Waterfall Walkdown', desc: 'Gross to net interaction & drop-off attribution', icon: BarChartHorizontal, bg: 'bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400' }
+  { name: 'Waterfall Walkdown', desc: 'Gross to net interaction & drop-off attribution', icon: BarChartHorizontal, bg: 'bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400' },
+  { name: 'Heatmap Matrix', desc: 'Density matrix & hourly intensity distribution', icon: LayoutGrid, bg: 'bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400' }
 ];
 
 export const EditModePanel: React.FC<EditModePanelProps> = ({

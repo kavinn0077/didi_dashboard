@@ -22,7 +22,6 @@ interface DataExplorerSectionProps {
   pageSize: number;
   onPageChange: (newPage: number) => void;
   onExportCSV: () => void;
-  onGenerateExcel: () => void;
   onGenerateWord: () => void;
   onFileUpload: (files: FileList | null) => void;
   currentLang: LanguageCode;
@@ -38,7 +37,6 @@ export const DataExplorerSection: React.FC<DataExplorerSectionProps> = ({
   pageSize,
   onPageChange,
   onExportCSV,
-  onGenerateExcel,
   onGenerateWord,
   onFileUpload,
   currentLang,
@@ -479,32 +477,17 @@ export const DataExplorerSection: React.FC<DataExplorerSectionProps> = ({
 
           {/* Compact Single-Row Report Generator with Hover Tooltips */}
           <div className="flex items-center space-x-2">
-            {/* Excel Report Button with Tooltip */}
-            <div className="relative group">
-              <button
-                onClick={onGenerateExcel}
-                className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-500/20 transition flex items-center gap-1.5 cursor-pointer"
-              >
-                <FileSpreadsheet className="w-3.5 h-3.5" />
-                <span>{t.btn_gen_excel}</span>
-              </button>
-              <div className="hidden group-hover:block absolute bottom-full right-0 mb-2 w-64 p-2.5 rounded-xl bg-slate-900 text-white text-[11px] shadow-2xl border border-slate-700 z-50 pointer-events-none animate-in fade-in">
-                <p className="font-bold text-emerald-400 mb-0.5">{t.tip_excel_title}</p>
-                <p className="text-slate-300">{t.tip_excel_desc}</p>
-              </div>
-            </div>
-
             {/* Word Report Button with Tooltip */}
             <div className="relative group">
               <button
                 onClick={onGenerateWord}
-                className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-orange-600 hover:bg-orange-700 text-white shadow-sm shadow-orange-500/20 transition flex items-center gap-1.5 cursor-pointer"
+                className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm shadow-blue-500/20 transition flex items-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>{t.btn_gen_word}</span>
               </button>
               <div className="hidden group-hover:block absolute bottom-full right-0 mb-2 w-64 p-2.5 rounded-xl bg-slate-900 text-white text-[11px] shadow-2xl border border-slate-700 z-50 pointer-events-none animate-in fade-in">
-                <p className="font-bold text-orange-400 mb-0.5">{t.tip_word_title}</p>
+                <p className="font-bold text-blue-400 mb-0.5">{t.tip_word_title}</p>
                 <p className="text-slate-300">{t.tip_word_desc}</p>
               </div>
             </div>

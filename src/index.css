@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200;
+  }
+  .dark body {
+    background-color: #0c0a09; /* Deep warm dark background with orange undertones */
+    color: #f8fafc;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}

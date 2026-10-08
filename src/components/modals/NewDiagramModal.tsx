@@ -136,10 +136,16 @@ export const NewDiagramModal: React.FC<NewDiagramModalProps> = ({
                 className="w-full text-xs px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:ring-2 focus:ring-orange-500"
               >
                 <option value="bar">Bar Chart</option>
-                <option value="line">Line Trend</option>
-                <option value="area">Area Chart</option>
-                <option value="donut">Donut / Pie Chart</option>
+                <option value="line">Trend Timeline</option>
+                <option value="donut">Distribution Share / Donut</option>
+                <option value="area">Stacked Area Horizon</option>
                 <option value="scatter">Scatter Matrix</option>
+                <option value="heatmap">Heatmap Matrix</option>
+                <option value="treemap">Volume Treemap</option>
+                <option value="funnel">Conversion Funnel</option>
+                <option value="radar">Radar Profile</option>
+                <option value="boxplot">Box Plot Dispersion</option>
+                <option value="waterfall">Waterfall Walkdown</option>
               </select>
             </div>
             <div>
